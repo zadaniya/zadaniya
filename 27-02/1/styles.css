@@ -1,0 +1,31 @@
+:root {
+    --bg: #f5f5f5;
+    --accent: #ff8c00
+}
+
+body {
+    background-color: var(--bg);
+}
+
+.block {
+    width: 100px;
+    height: 100px;
+    background-color: var(--accent);
+    position: absolute;
+    left: -100px;
+    animation: slider 1s linear infinite;
+}
+
+.not-a-block {
+    border: 7px solid var(--accent);
+    width: 50%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    height: 100px;
+}
+
+@keyframes slider {
+    0% {left: -100px}
+    100% {left: 100%}
+}
