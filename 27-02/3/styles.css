@@ -1,0 +1,79 @@
+:root {
+    --bg: #fafad2;
+}
+
+body {
+    background-color: var(--bg);
+    font: 16px/1.55 system-ui, -apple-sys;
+}
+
+h2 {
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.pics {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.calc {
+    background-image: url('https://raw.githubusercontent.com/zadaniya/zadaniya/main/27-02/3/calc.png');
+    width: 100px;
+    height: 100px;
+    background-size: 100px;
+    transform: rotate(-30deg);
+    margin-top: 90px;
+}
+
+.book {
+    background-image: url('https://raw.githubusercontent.com/zadaniya/zadaniya/main/27-02/3/book.png');
+    width: 150px;
+    height: 150px;
+    background-size: 150px;
+    transform: rotate(-15deg);
+}
+
+.paper {
+    background-image: url('https://raw.githubusercontent.com/zadaniya/zadaniya/main/27-02/3/paper.png');
+    width: 150px;
+    height: 150px;
+    background-size: 150px;
+    transform: rotate(15deg);
+}
+
+.pallete {
+    background-image: url('https://raw.githubusercontent.com/zadaniya/zadaniya/main/27-02/3/pallete.png');
+    width: 100px;
+    height: 100px;
+    background-size: 100px;
+    transform: rotate(230deg);
+    margin-top: 90px;
+}
+
+.pencil {
+    background-image: url('https://raw.githubusercontent.com/zadaniya/zadaniya/main/27-02/3/pencil.png');
+    width: 100px;
+    height: 100px;
+    background-size: 100px;
+    transform: rotate(90deg);
+    margin-top: -20px;
+}
+
+.pics div {
+    position: relative;
+    top: 50px;
+    opacity: 0;
+    animation: slide 2s forwards;
+}
+.pics div:nth-child(1) { animation-delay: 0s; }
+.pics div:nth-child(2) { animation-delay: 0.5s; }
+.pics div:nth-child(3) { animation-delay: 1s; }
+.pics div:nth-child(4) { animation-delay: 1.5s; }
+.pencil { animation-delay: 2s; }
+
+@keyframes slide {
+    to { top: 0; opacity: 1; }
+}
