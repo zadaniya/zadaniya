@@ -1,0 +1,36 @@
+:root {
+    --bg: #f5f5f5;
+}
+
+body {
+    background-color: var(--bg);
+}
+
+.heart {
+    filter: grayscale(100%);
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+}
+.heart:hover {
+    animation: a 0.5s forwards; /* мне кажется 5 секунд это слишком медленно */
+}
+.heart:not(:hover) {
+    animation: b 0.5s forwards;
+}
+
+@keyframes a {
+    0% {transform: scale(1);}
+    100% {
+        transform: scale(1.5);
+        filter: grayscale(0%);
+    }
+}
+
+@keyframes b {
+    0% {
+        transform: scale(1.5);
+        filter: grayscale(0%);
+    }
+    100% {transform: scale(1);}
+}
